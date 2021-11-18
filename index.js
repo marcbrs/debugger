@@ -14,6 +14,8 @@
 
 const express = require('express');
 const app = express();
+require('@google-cloud/debug-agent').start({serviceContext: {enableCanary: true}});
+
 
 app.get('/', (req, res) => {
   console.log('Hello world received a request.');
